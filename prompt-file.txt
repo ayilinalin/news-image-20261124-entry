@@ -1,0 +1,28 @@
+Kamu adalah builder entry make.fun bounty news-image-20261124 ("Sum up 24 November's world news in one image", pool $100, deadline entries 26 Nov 2026 07:00 WIB). Kompetisi BUKA 24 Nov 2026 07:00 WIB (00:00 UTC) — sesi ini sudah setelah jam buka, OK.
+
+TUGAS: bangun repo GitHub publik baru + program entry yang menulis SATU gambar ke /output/entry.png. Kamu TIDAK submit dan TIDAK bundle — parent yang lanjutkan. Kerja di ~/workspace/makefun-recon/news-image-20261124/ (buat foldernya).
+
+BACA DULU:
+- ~/workspace/makefun-recon/prep/news-image-20261124-PREP.md (deskripsi + rules + payout + kuota)
+- ~/workspace/makefun/news-image-20261124-kit/news-image-20261124-kit/RULES.txt (kit, sudah di-download + unpack)
+
+LARANGAN KERAS: JANGAN baca, buka, copy, atau clone file/repo entry hari sebelumnya di ~/workspace/makefun-recon/news-image-2026112*/ (repo + transcript hari lalu). Bangun SEMUA dari nol, orisinal. Jangan pakai starter kit sebagai entry (starter cuma contoh placeholder).
+
+BERITA (sudah diriset parent pagi ini — VERIFIKASI SENDIRI tiap tanggal lewat web search sebelum dipakai; buang yang tidak bisa kamu tempatkan di 23–24 Nov 2026; JANGAN pakai peristiwa yang jelas-jelas 22 Nov ke bawah sebagai berita 24 Nov):
+- Masthead: TUESDAY 24 NOVEMBER 2026.
+- Kandidat cerita: (1) Serangan Rusia ke wilayah Kyiv, Ukraina — beberapa tewas, orang hilang, bangunan hunian di Dymer rusak (dilaporkan 24 Nov). (2) Kebakaran pabrik di Banten, Indonesia (PT Fonusa Agung Mulia, Cikande): korban tewas terkonfirmasi 24, ~30 masih hilang, pencarian berlanjut (dikonfirmasi Senin 23 Nov; api Sabtu 21 Nov — bingkai sebagai update jumlah korban/pencarian, BUKAN kebakaran baru). (3) India–Nepal: Modi + PM Balendra Shah meresmikan Saryu-Kamala Express Ayodhya–Janakpur, 8 MoU, paket Rs 15.000 crore (24 Nov). (4) Kejuaraan Catur Dunia dibuka di Jenewa: Gukesh pertahankan gelar lawan Sindarov (mulai 24 Nov). (5) Alcaraz menangi gelar ATP Finals pertama kalahkan Zverev di Turin (verifikasi tanggal laporannya). (6) Ribuan orang protes biaya hidup di Lisbon (24 Nov). (7) Reshuffle Korea Selatan: menlu + kepala intelijen baru dinominasikan (24 Nov). (8) Laporan Oxfam/CEOBS: kontaminasi Gaza akibat bahan peledak (rilis 24 Nov). (9) Ukraina tenggelamkan korvet Rusia di Benghazi, Libya dengan drone laut (diumumkan Zelenskyy Senin 23 Nov).
+- HINDARI sebagai berita 24 Nov: runtuhnya COP31 (22 Nov), kebakaran kapal Sparta II (21 Nov), Verstappen menang GP Las Vegas (21–22 Nov).
+
+GAMBAR: halaman depan koran, digambar dari nol (disarankan PIL/draw.py — semua bentuk geometris, tanpa foto/internet, teks dieja benar dan terbaca di 1024px). Masthead "THE WORLD TODAY" + banner tanggal "TUESDAY 24 NOVEMBER 2026" besar. Satu headline utama + 4 panel (2x2) dengan judul singkat + 1-2 kalimat tiap panel. Ukuran akhir 1024x1024 PNG, ≤1 MiB (1048576 byte). Cek visual sendiri (baca kembali gambar hasil render, periksa ejaan + keterbacaan) sebelum selesai.
+
+REPO: https://github.com/ayilinalin/news-image-20261124-entry — buat BARU via gh CLI (akun ayilinalin sudah login), public, setelah jam buka (sekarang OK). Isi: main.py (Python 3.13 stdlib SAJA, tanpa network), entry.png, draw.py (kalau pakai), README.md (pakai 3 badge live make.fun: https://make.fun/badge/news-image-20261124.svg + https://make.fun/badge/news-image-20261124/ayilinalin/news-image-20261124-entry/rank.svg + .../reward.svg, link ke https://make.fun/bounty/news-image-20261124, tanpa placeholder), LICENSE MIT (baris pertama SPDX-License-Identifier: MIT), .makefun/owner.json berisi {"wallet": "Hnh8g2WHZy1DSBdoGJ2bZMtborjAXCb7Lyjdqc6hPx8z"}. Set GitHub About repo: website https://make.fun/bounty/news-image-20261124 + topic makefun (pakai gh repo edit). Commit pertama dengan pesan "news-image-20261124 v1: front page of Tuesday 24 November 2026", push ke main.
+
+ATURAN TRANSCRIPT GATE (wajib dipatuhi agar entry lolos):
+- Entrypoint main.py HARUS ditulis dari minimal 2 pesan write/edit-mu sendiri. JANGAN PERNAH membaca main.py sebelum kamu menulisnya (jangan cat/read file itu dulu).
+- Minimal 5 assistant turns yang berisi teks/thinking.
+- JANGAN hand over session. Jangan menulis session file sendiri.
+- main.py: baca output dir dari env MAKEFUN_OUTPUT_DIR (jangan hardcode /output), copy entry.png repo ke $MAKEFUN_OUTPUT_DIR/entry.png, self-check magic PNG + cap 1 MiB + cap 1024x1024, verifikasi copy byte-identik (sha256), tulis output mode 0644. Deterministik: dua run harus hasilkan byte identik.
+
+VERIFIKASI LOKAL (seperti grader): jalankan 2x dengan MAKEFUN_OUTPUT_DIR berbeda, exit 0, sha256 run1 == run2 == sha256 entry.png repo, ukuran ≤1 MiB, 1024x1024, mode 0644. Simpan prompt-file.txt (prompt pembuka sesi ini, apa adanya) di folder kerja.
+
+LAPORAN AKHIR ke parent: repo URL, commit sha lengkap, entry.png sha256 + ukuran byte + dimensi, hasil 2 run lokal, daftar cerita yang dipakai + sumber tanggalnya, dan konfirmasi semua aturan gate di atas dipenuhi. Jangan submit, jangan bundle.
